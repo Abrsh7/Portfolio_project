@@ -1,0 +1,41 @@
+.account-table,
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.account-table th,
+.account-table td,
+.transaction-table th,
+.transaction-table td {
+  padding: 10px;
+}
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.welcome-message {
+  overflow: hidden;
+}
+
+.account-table th,
+.transaction-table th {
+  background-color: lightblue;
+  font-weight: bold;
+}
+
+.account-table td,
+.transaction-table td {
+  border: 1px solid black;
+}
+
+.account-table td:first-child,
+.transaction-table td:first-child {
+  border-right: none;
+}
+
+.account-table td:last-child,
+.transaction-table td:last-child {
+  border-left: none;
+}

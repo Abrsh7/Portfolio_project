@@ -27,12 +27,12 @@
                     
                     
                     
-                    <li class="list-group-item"><input type="text" placeholder="" value="{{session['user']}}" class="form-control" id="username" name = "username" readonly></li></li>
+                    <li class="list-group-item"><input type="text" placeholder="" value="{{session['user_id']}}" class="form-control" id="username" name = "username" readonly></li></li>
                     
           
                     <b>Balance: </b>
 
-                    <li class="list-group-item"><input type="text" placeholder="0" value='{{money}}' class="form-control" id="username" name = "username" readonly></li></li>
+                    <li class="list-group-item"><input type="text" placeholder="0" value='{{account.balance}}' class="form-control" id="username" name = "username" readonly></li></li>
   
                   </form>
                 </ul>

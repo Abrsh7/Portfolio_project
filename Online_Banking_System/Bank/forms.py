@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, FloatField
-from wtforms.validators import DataRequired, Email, EqualTo, NumberRange, Length, ValidationError
-from APP.models import User
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Email, EqualTo, Length, ValidationError
+from Bank.models import User
 
 class RegistrationForm(FlaskForm):
  
@@ -27,20 +27,3 @@ class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Login')
-
-
-class WithdrawForm(FlaskForm):
-    amount = FloatField('Amount', validators=[DataRequired(), NumberRange(min=0.01)])
-    submit = SubmitField('Withdraw')
-
-
-class DepositForm(FlaskForm):
-    amount = FloatField('Amount', validators=[DataRequired(), NumberRange(min=0.01)])
-    submit = SubmitField('Deposit')
-
-
-class TransferForm(FlaskForm):
-    recipient = StringField('Recipient Account Number', validators=[DataRequired()])
-    amount = FloatField('Amount', validators=[DataRequired(), NumberRange(min=0.01)])
-    submit = SubmitField('Transfer')
-
