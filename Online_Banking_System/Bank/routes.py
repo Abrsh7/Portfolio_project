@@ -159,13 +159,9 @@ def transfer():
             deposit_transaction = Transaction(account_id=to_account_id, amount=amount, transaction_type='deposit')
             db.session.add(deposit_transaction)
             db.session.commit()
-
-            flash(f"Successfully transferred {amount} to {to_account_id}. now the available balance in your account is ${account.balance}", category='success')
-
+            flash(f'Successfully transferred ${amount} to {to_account_id}', category='success')
         else:
             return render_template('transfer.html', user=user, error='Insufficient balance')
-        
-
         return redirect('/account')
 
     return render_template('transfer.html', user=user)
